@@ -3,11 +3,15 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { PreauthMiddleware } from './auth/preauth.middleware';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { dbConfig } from './config/postgres.config';
 @Module({
-  imports: [UserModule],
+  imports: [UserModule,
+    TypeOrmModule.forRoot(dbConfig),
+    UserModule],
   controllers: [AppController],
   providers: [AppService],
-})
+}) 
 export class AppModule implements NestModule {
 
 configure(consumer: MiddlewareConsumer) {
