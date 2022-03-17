@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
-const baseUrl ='http://10.10.1.103:3000';
+const baseUrl ='http://10.10.0.245:3000';
 @Injectable({
   providedIn: 'root'
 })

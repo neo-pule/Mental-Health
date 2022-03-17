@@ -30,6 +30,8 @@ chrome-profiler-events*.json
 !.vscode/extensions.json
 .history/*
 
+/.firebase.json
+
 # misc
 /.angular/cache
 /.sass-cache
